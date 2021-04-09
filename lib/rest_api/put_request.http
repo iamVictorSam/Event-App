@@ -1,0 +1,19 @@
+ postTest() async {
+
+    final uri = 'https://projects.deelesisuanu.com/elliot-events/bookEvent';
+    var requestBody = {
+      'fullName':'sam victor',
+      'emailAddress':'deelesivictorsam@gmail.com',
+      'phoneNumber':08089633542,
+      'eventId': 1,
+    };
+
+      http.Response response = await http.post(
+        uri,
+        body: json.encode(requestBody),
+    );
+
+    print(response.body);
+  }
+  
+###
